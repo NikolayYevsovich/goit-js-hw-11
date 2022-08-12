@@ -1,0 +1,99 @@
+
+body{
+	background-image:
+	linear-gradient(60deg,
+	#b16ec4,
+	#5f97b9)
+}
+
+
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+input{
+	
+	outline: transparent;
+	border: solid;
+	border-radius: 18px;
+	font-size: 25px;
+	padding: 2px 5px;
+	border: 3px solid #b16ec4;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+
+}
+.info{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+}
+.gallery{
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.card-image{
+	width: 340px;
+	height: 240px;
+	object-fit: cover;
+}
+
+b{
+	font-size: 14px;
+}
+
+.photo-card{
+	padding: 10px;
+	background: linear-gradient(60deg,
+				hsl(224, 85%, 66%),
+				hsl(269, 85%, 66%),
+				hsl(314, 85%, 66%),
+				hsl(359, 85%, 66%),
+				hsl(44, 85%, 66%),
+				hsl(89, 85%, 66%),
+				hsl(134, 85%, 66%),
+				hsl(179, 85%, 66%));
+		background-size: 300% 300%;
+		background-position: 0 50%;
+		border-radius: calc(2 * var(--border-width));
+		animation: moveGradient 4s alternate infinite;
+	
+}
+
+@keyframes moveGradient {
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+.info-item:not(:last-child){
+	margin-right: 20px;
+}
+
+.stats{
+	font-size: 12;
+	text-align: center;
+}
+b{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+img{
+	display: block;
+}
