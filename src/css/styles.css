@@ -14,34 +14,46 @@ form {
 }
 
 input{
-	
 	outline: transparent;
 	border: solid;
 	border-radius: 18px;
 	font-size: 25px;
-	padding: 2px 5px;
+	padding: 2px 10px;
 	border: 3px solid #b16ec4;
 	position: absolute;
 }
+::placeholder {
+	font-size: 18px;
+	color: transparent;
+	transition: color 300ms ease-in;
+}
+input:hover::placeholder {
+	font-family: cursive;
+	color: #ff6781;
+}
+input:focus::placeholder {
+	font-family: cursive;
+	color: transparent;
+}
+
+
+
 .search-button{
 	position: relative;
 	padding: 0;
 	background-color: transparent;
 	border: none;
-	left: 140px;
+	transform: translateX(-140px);
 	top: 9px;
+	fill: #ffb8c6;
 	transition: fill 200ms linear, transform 500ms ease-in-out;
 }
 
-input:hover .search-button{
-	transform: translateY(300px);
+.search-form:hover .search-button{
+	transform: translateX(145px);
+	fill: #ff6781;
 }
 
-
-
-.search-button:hover {
-	fill: palevioletred;
-}
 .photo-card{
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	margin: 5px;
