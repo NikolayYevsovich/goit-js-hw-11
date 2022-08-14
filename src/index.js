@@ -32,11 +32,12 @@ async function onSearch(event) {
   pixabayApiService.resetPage();
   try {
     const imagesArr = await pixabayApiService.fetchImages();
-    if (imagesArr.length === 0) {
+    console.log(imagesArr);
+    if (imagesArr.hits.length === 0) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
-    } else if (imagesArr.length > 0) {
+    } else if (imagesArr.hits.length > 0) {
       Notiflix.Notify.success(`Hooray! We found ${imagesArr.length} images.`);
     }
     clearMarkup();
