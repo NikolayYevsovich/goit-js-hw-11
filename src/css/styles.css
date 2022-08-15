@@ -27,6 +27,7 @@ input{
 	color: transparent;
 	transition: color 300ms ease-in;
 }
+
 input:hover::placeholder {
 	font-family: cursive;
 	color: #ff6781;
@@ -35,8 +36,6 @@ input:focus::placeholder {
 	font-family: cursive;
 	color: transparent;
 }
-
-
 
 .search-button{
 	position: relative;
@@ -52,6 +51,10 @@ input:focus::placeholder {
 .search-form:hover .search-button{
 	transform: translateX(145px);
 	fill: #ff6781;
+}
+
+input:not(:placeholder-shown) +.search-button{
+	transform: translateX(145px);
 }
 
 .photo-card{
@@ -174,4 +177,25 @@ img{
 	border-style: outset;
 }
 
+.header {
+	font-family: cursive;
+	font-size: 6rem;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
 
+@-webkit-keyframes hue {
+	from {
+		-webkit-filter: hue-rotate(0deg);
+	}
+
+	to {
+		-webkit-filter: hue-rotate(-360deg);
+	}
+}
