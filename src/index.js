@@ -38,7 +38,9 @@ async function onSearch(event) {
         'Sorry, there are no images matching your search query. Please try again.'
       );
     } else if (imagesArr.hits.length > 0) {
-      Notiflix.Notify.success(`Hooray! We found ${imagesArr.length} images.`);
+      Notiflix.Notify.success(
+        `Hooray! We found ${imagesArr.hits.length} images.`
+      );
     }
     clearMarkup();
     renderImages(imagesArr.hits);
